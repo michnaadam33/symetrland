@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Color Shot"
+AuthUserFile /home/createfu/domains/symetrland.com/public_html/dev/color-shot/.htpasswd
+Require valid-user

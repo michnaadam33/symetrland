@@ -1,0 +1,149 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Wyliczanie poziomu mazutu</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Start</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <div id="alert" class="alert alert-danger" style="display: none">
+            <a onclick="$('.alert').hide()" class="close" aria-label="close">&times;</a>
+            <strong>Uwaga!</strong>
+            <p></p>
+        </div>
+        <h1>Wyliczanie poziomu mazutu</h1>
+        <br>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Pomiar [mm]</th>
+                    <th>Objętość [m3]</th>
+                    <th>Objętość [dm3]</th>
+                    <th>Waga [T]</th>
+                    <th>Waga [kg]</th>
+                    <th>Temperatura [&#186 C]</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id="row-zom-1">
+                    <td>ZOM1</td>
+                    <td>
+                        <input min="10" max="10000" type="number" placeholder="pomiar" id="value-zom-1"
+                               class="value-zom" value="0">
+                    </td>
+                    <td class="volumeM">0</td>
+                    <td class="volumeD">0</td>
+                    <td class="weightT">0</td>
+                    <td class="weightK">0</td>
+                    <td>
+                        <input min="0" step="0.01" type="number" id="temp-zom-1" class="temp-zom" value="90">
+                    </td>
+                </tr>
+                <tr id="row-zom-2">
+                    <td>ZOM2</td>
+                    <td>
+                        <input min="1" max="10000" type="number" placeholder="pomiar" id="value-zom-2" class="value-zom"
+                               value="0">
+                    </td>
+                    <td class="volumeM">0</td>
+                    <td class="volumeD">0</td>
+                    <td class="weightT">0</td>
+                    <td class="weightK">0</td>
+                    <td>
+                        <input min="0" step="0.01" type="number" id="temp-zom-2" class="temp-zom" value="90">
+                    </td>
+                </tr>
+                <tr id="row-zom-3">
+                    <td>ZOM3</td>
+                    <td>
+                        <input min="0" max="11570" type="number" placeholder="pomiar" id="value-zom-3" class="value-zom"
+                               value="0">
+                    </td>
+                    <td class="volumeM">0</td>
+                    <td class="volumeD">0</td>
+                    <td class="weightT">0</td>
+                    <td class="weightK">0</td>
+                    <td>
+                        <input min="0" step="0.01" type="number" id="temp-zom-3" class="temp-zom" value="90">
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr id="row-sum">
+                    <td><b>SUMA:</b></td>
+                    <td></td>
+                    <td class="volumeMSum">0</td>
+                    <td class="volumeDSum">0</td>
+                    <td class="weightTSum">0</td>
+                    <td class="weightKSum">0</td>
+                    <td></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <hr>
+
+    <footer>
+        <a href="http://symetrland.com" target="_blank"><p>&copy; Symetrland - 2016</p></a>
+    </footer>
+</div> <!-- /container -->
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
