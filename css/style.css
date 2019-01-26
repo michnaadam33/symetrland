@@ -1751,3 +1751,7 @@ header {
             transform:scale(0);
   }
 }
+.flex-container {
+    display: flex; /* or inline-flex */
+    justify-content: center;
+}

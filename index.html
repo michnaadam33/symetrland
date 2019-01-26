@@ -42,6 +42,7 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -349,10 +350,10 @@
 						<i class="fa fa-laptop"></i>
 						<h3 class="white-text"><span class="counter">1</span></h3>
 						<span class="white-text">Computer</span>
-				        </div> 
+				        </div>
 				</div>
 <!--                                 /number
-   - 
+   -
    -                                 number -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="number">
@@ -404,7 +405,7 @@
 						<h3>LinkedIn</h3>
 						<a href="https://www.linkedin.com/in/adammichna/" target="_blank">adammichna</a>
 					</div>
-				</div> 
+				</div>
 				<!-- /contact -->
 
 				<!-- contact -->
@@ -429,13 +430,16 @@
 
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form" method="POST" netlify>
+					<form class="contact-form" method="POST" data-netlify-recaptcha="true" data-netlify="true">
 						<input type="text" name="name" class="input" placeholder="Name">
 						<input type="email" name="email" class="input" placeholder="Email">
-						<input type="text" name="subject" lass="input" placeholder="Subject">
-						<textarea class="input" name="message" placeholder="Message"></textarea>
-						<button class="main-btn">Send message</button>
-					</form>
+                        <input type="text" name="subject" lass="input" placeholder="Subject">
+                        <textarea class="input" name="message" placeholder="Message"></textarea>
+                        <div class="flex-container">
+                            <div class="g-recaptcha" data-sitekey="6LfU3owUAAAAAIY3iayYpYeK60n11_jkWpl3wsjE"></div>
+                            <button class="main-btn">Send message</button>
+                        </div>
+                    </form>
 				</div>
 				<!-- /contact form -->
 			</div>
